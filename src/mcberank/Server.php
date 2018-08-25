@@ -72,6 +72,11 @@ class Server {
 
         $type == 0 ? $type = 1 : $type = 0;
     }
+	if(count($this->getRecentQueries() >= 60 * 24 * 3) { //3 days
+		foreach($this->getRecentQueries() as $query){
+			
+		}
+	}
     foreach($this->getRecentQueries() as $query) {
     	
     }
