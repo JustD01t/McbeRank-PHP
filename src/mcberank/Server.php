@@ -33,7 +33,7 @@ class Server {
 	public function getPort() : int {
 		return $this->port;
 	}
-	public static function query() : void{
+	public function query() : void{
 		$sock = @fsockopen( "udp://" . $this->getIp(), $this->getPort() );
     if ( !$sock ) $this->stats = self::STATS_OFFLINE;
     socket_set_timeout( $sock, 0, 500000 );
